@@ -1,0 +1,42 @@
+<%= form_with(model: category) do |form| %>
+
+  <% if category.errors.any? %>
+    <div class="error_form_container">
+      <h2>
+        <%= t (".errors"), count:category.errors.count %>
+        
+      </h2>
+      <ul class="error_form_ul">
+        <% category.errors.each do |error| %>
+          <li class="error_form_li" type="1"> <%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div> 
+  <% end %>
+<ul class="ul_form_fields">
+  <li class= 'li_title_area'>
+    <label for="title_area"><%= t(".title") %></label>
+    <%= form.text_field :title,id: "title_area", placeholder:'discribe your title',value: @category.title%>
+  </li>
+  <li class= 'li_text_area'>
+    <label for="descrip_area"><%= t(".description") %></label>
+    <%= form.text_area :description,id: "descrip_area", placeholder:'discribe your category here',value: @category.description%>
+  </li>
+  <li class= 'li_file_field'>
+  </li>
+  <div class="img_upload_container">
+        <label for="input-file" id="drop-area">
+          <%= form.file_field :category_img, id:"input-file",accept:"image/*" ,hidden: true%>
+            <div id="img_view_container">
+                <%=image_tag("icons/upload_icon.png", alt: 'upload img',id:'upload_img')%>
+                <p class="img_text"><%= t(".services_html") %></p>
+            </div>
+        </label>
+    </div>
+
+  <li class="li_button">
+    <%= form.submit t(".submit")%>
+  </li>
+</ul>
+<% end %>
+

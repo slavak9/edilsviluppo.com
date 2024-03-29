@@ -1,0 +1,68 @@
+<%= form_with(model: post) do |form| %>
+
+
+<% if post.errors.any? %>
+    <div class="error_form_container">
+      <h2><%= t (".errors"), count:post.errors.count %></h2>
+      <div>
+      <ul class="error_form_ul">
+        <% post.errors.each do |error| %>
+          <li class="error_form_li" type="1"> <%= error.full_message %></li>
+        <% end %>
+      </ul>
+      </div>
+    </div>
+<% end %>
+<%if !@works.empty?%>
+
+<ul class="ul_form_fields">
+  <div class="select_category_button">
+    <h3 class="selected_category_h3"><%= t("products.form.select_cat") %></h3>
+    <%=image_tag("icons/down-arrow.png")%>
+  </div>
+  <div class="drop_down_menu_div">
+    <ul class="select_category_container display_none">
+    <% @works.each do |work| %>
+      <li class="li_select_category" data-id=<%= work.id %>>
+        <label for="post_category_<%= work.id %>" class="label_category_<%= work.id %>"><%= work.title %>
+        <% if work.id == @post.work_id %>
+        <input type="radio" id="post_category_<%= work.id %>"
+        name="post[work_id]" value=<%= work.id %> hidden checked>
+        <%else%>
+        <input type="radio" id="post_category_<%= work.id %>"
+        name="post[work_id]" value=<%= work.id %> hidden >
+        <% end %>
+        </label>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+
+
+
+  <li class= 'li_text_area margin_top'>
+    <label for="descrip_area"><%= t("categories.form.description")%></label>
+    <%= form.text_area :description, id: "descrip_area", placeholder:'discribe your post here',value: @post.description%>
+  </li>
+  <li class= 'li_file_field'>
+  </li>
+    <div class="img_upload_container">
+        <label for="input-file" id="drop-area">
+          <%= form.file_field :post_img,id:"input-file",accept:"image/*" ,hidden: true%>
+            <div id="img_view_container">
+                <%=image_tag("icons/upload_icon.png", alt: 'upload img',id:'upload_img')%>
+                <p class="img_text"><%= t("categories.form.services_html") %></p>
+            </div>
+        </label>
+    </div>
+  <li class="li_button">
+    <%= form.submit t("products.form.create_post") %>
+  </li>
+</ul>
+<% else %>
+  <p style="color:red; text-align:center; font-size:140%;"><%= t(".notification") %></p>
+  <div class="back_link_container align">
+    <%= link_to t("categories.new.back"), works_path %>
+  </div>
+<% end %>
+<% end %>

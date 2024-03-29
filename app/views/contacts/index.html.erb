@@ -1,0 +1,58 @@
+
+
+
+    <div class="list_contact-cont">
+    <ul>
+      <li>
+        <h1><%= t(".l_contact") %></h1>
+      </li>
+      <li>
+        <h2>Angelo Pelleriti</h2>
+        <p><span>Tel:</span><a href="tel:+39 324 6123960"> +39 324 6123960</a></p>
+      </li>
+      <li>
+        <h2>Filippo Pelleriti</h2>
+        <p><span>Tel:</span><a href="tel:+39 335 656 2064"> +39 335 6562064</a></p>
+      </li>
+      <li>
+        <h2>Email</h2>
+        <p><a href="mailto:info@edilsviluppo.com">info@edilsviluppo.com</a></p>
+      </li>
+      <li>
+        <h2><%= t(".address") %></h2>
+        <p>98060 Basicò (ME) - C/da Dardone sn</p>
+      </li>
+    </ul>
+  </div>
+<div class="form_container_contact">
+    <form class="form_contacts_1" action="https://formsubmit.co/slavakudaka@gmail.com" method="post" >
+        <h1><%= t(".form_h") %></h1>
+    <ul>
+    <li>
+        <label for="contact_name"><%= t(".from_name") %></label>
+        <input id="contact_name" type="text" name="name" required>
+    </li>
+    <li>
+        <label for="contact_last"><%= t(".form_last_name") %></label>
+        <input id="contact_last" type="text" name="last_name" required>
+    </li>
+    <li>
+        <label for="contact_email"><%= t(".from_email") %></label>
+        <input id="contact_email" type="email" name="email" required>
+    </li>
+    <li>
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="EdilSviluppo.com">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_next" value='<%= request.original_url%>/success'>
+        <label for="contact_area"><%= t(".from_message") %></label>
+        <textarea name="message" id="contact_area" required placeholder="describe your question here"></textarea>
+    </li>
+    <li class="li_button">
+        <button type="submit"><%= t(".send") %></button>
+    </li>
+    </ul>
+
+    </form>
+</div>

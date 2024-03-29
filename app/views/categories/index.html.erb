@@ -1,0 +1,40 @@
+
+<div class="show_category_container">
+
+
+<h1><%= t(".head_title_cat") %></h1>
+<p style="color: green"><%= notice %></p>
+
+<h2 class="h2_bt"><%= link_to t(".bt_add_cat"), new_category_path %></h2>
+
+
+  <div class="grid_list_display">
+    <div id="delete_info_container" class="delete_info_container_mess display_none">
+      <h2 class="confirm_message"><%= t(".confirm_message_html") %></h2>
+      <div class="delete_info_container_button">
+        <button id="yes_button"><%= t(".confirm_yes") %></button><button id="no_button"><%= t(".confirm_no") %></button>
+      </div>
+    </div>
+    <header class="list_header_cont">
+        <p class="p_description"><%= t(".description") %></p>
+        <p class="p_picture"><%= t(".image") %></p>
+        <p class="p_manage"><%= t(".manage_content") %></p>
+    </header>
+    <% @categories.each do |category| %>
+    <div class="list_content_cont">
+        <div class="i_description"><p><%= category.title%></p></div>
+        <div class="i_picture">
+          <% if category.category_img.attached? %>
+          <%= image_tag category.category_img%>
+          <% end %>
+        </div>
+        <div class="div_manage">
+            <div class="i_show"><%= button_to t(".show_cont"), category, method: :get %></div>
+            <div class="i_edit"><%= button_to t(".edit_cont"), edit_category_path(category), method: :get %></div>
+            <div id="del_<%= category.id%>" class="i_delete"><%= button_to t(".delete_cont"), category, method: :delete %></div>
+        </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+

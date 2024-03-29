@@ -1,0 +1,125 @@
+en:
+  home:
+    header:
+      home:     "Home"
+      our_work: "Our works"
+      company:  "Company"
+      news:     "News"
+      contacts: "Contacts"
+      manage:   "Manage"
+      country_code: "EN"
+
+
+    index:
+      head_title_home: "Description about company"
+
+    manage:
+        manage_categories: "Manage categories of the product"
+        manage_products: "Manage products" 
+        manage_works: "Manage works of the post"
+        manage_posts: "Manage posts"
+
+  our_works:
+    index:
+      header_title: "Our works"
+
+  categories:
+    index:
+      head_title: "Category of products"
+      bt_add_cat: "Add new category"
+      description: 'Description'
+      image: "Image"
+      manage_content: "Manage contents"
+      show_cont: "Show"
+      edit_cont: "Edit"
+      delete_cont: "Delete"
+      confirm_message_html: "Deleting this category will delete all posts that is associated with it! <br> Are you sure that you want to do this?"
+      confirm_yes: "Yes"
+      confirm_no: "No"
+    
+    new:
+      head_title: "New Category of product"
+      back: "Back to categories"
+
+    show:
+      mod_cat: "Edit category"
+      del_cat: "Delete category"
+  
+    edit:
+      edit_cat: "Edit Category"
+    
+    form:
+      title: "Title:"
+      description: 'Description:'
+      submit: "Create Category"
+      services_html: "Drag and drop, <br>or click here <br>to upload image"
+      errors:
+          one: "One error prohibited this category from being saved:"
+          other: "%{count} errors prohibited this category from being saved:"
+
+  img_error: "must be GIF, JPG, PNG, WebP or AVIF format"
+
+  products:
+    index:
+      title_post: "Product items"
+      add_post_bt: "Add new item"
+    
+    new:
+        head_title: "New post"
+        back: "Back to posts"
+    show:
+      mod_post: "Edit post"
+      del_post: "Delete post"
+    
+    edit:
+      edit_post: "Edit Post"
+
+    form:
+      select_cat: "Select category"
+      description: "Description:"
+      create_post:  "Create Post"
+      notification: "Please add category first!"
+      services_html: "Drag and drop, <br>or click here <br>to upload image"
+      errors:
+          one: "One error prohibited this post from being saved:"
+          other: "%{count} errors prohibited this post from being saved:"
+
+
+  mess_cat_created: "Category was successfully created."
+  mess_cat_update: "Category was successfully updated."
+  mess_cat_delete: "Category was successfully deleted."
+
+  mess_post_created: "Post was successfully created."
+  mess_post_update: "Post was successfully updated."
+  mess_post_delete: "Post was successfully deleted."
+
+  contacts:
+    index:
+      from_name: "Name:"
+      form_last_name: "Last name:"
+      from_email: "Email:"
+      from_message: "Message:"
+      send: "Send"
+      form_h: "Ask a question"
+      address: "Address"
+      l_contact: "Contacts"
+
+    success:
+      success_message: "Thanks!  We will contact you as soon as possible."
+    
+
+  works:
+    index:
+      title: "Work categories"
+      add_new: "Add new work category"
+    
+    new:
+      title: "New category of work"
+
+  posts:
+    index:
+      title: "Articles of the works"
+      add_new: "Add new work category"
+    new:
+      title: "New post of the work"
+      back: "Back to posts of the work"

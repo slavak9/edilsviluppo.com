@@ -1,0 +1,37 @@
+.footer_container{
+    justify-content: space-around;
+    background-color: rgb(0, 144, 82);
+}
+.footer-info{
+    flex-direction: column;
+}
+.footer-img{
+    padding: 20px;
+}
+.footer-info p{
+    font-size: 140%;
+    color: rgb(250, 252, 251);
+    margin: 2px 0;
+}
+.footer-info .text{
+    font-size: 200%;
+    font-family: 'Courier', monospace;
+}
+
+@media screen and (max-width:1000px){
+    .footer-info p{
+        font-size: 120%;
+    }
+    .footer-info .text{
+        font-size: 140%;
+    }
+    .footer-img img {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width:670px){
+    .footer_container{
+        flex-direction: column;
+    }
+}

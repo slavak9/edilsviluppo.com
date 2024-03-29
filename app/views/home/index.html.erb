@@ -1,0 +1,17 @@
+
+<h1 class="home_h1_heder"><%= t(".head_title_home") %></h1>
+<div class="main_show_container">
+    <% @categories.each do |category| %>
+    <div class="detail_container">
+        <div class="img_container">
+        <% if category.category_img.attached? %>
+        <%= link_to image_tag(category.category_img), home_gallery_path(cat_id: category.id)%>
+        <% end %>
+        </div>
+        <header class="description_container">
+            <h2><%= link_to category.title, home_gallery_path(cat_id: category.id)%></h2>
+            <p><%= link_to category.description, home_gallery_path(cat_id: category.id)%></p>
+        </header>
+    </div>
+    <% end %>
+</div>

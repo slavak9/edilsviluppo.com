@@ -1,0 +1,20 @@
+
+<div class="gallery_main_show_container">
+    <% if !@product.empty? %>
+    <h2><%= @cat_title.title %></h2>
+    <% @product.each do |p| %>
+    <div class="gallery_detail_container">
+        <div class="gallery_img_container">
+        <% if p.product_img.attached? %>
+        <%= image_tag p.product_img %>
+        <% end %>
+        </div>
+        <header class="gallery_description_container">
+            <h3><%= p.description %></h3>
+        </header>
+    </div>
+    <% end %>
+    <% else %>
+    <h1>Sorry gallery is in working state<h1>
+    <% end %> 
+</div>

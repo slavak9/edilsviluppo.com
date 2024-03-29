@@ -1,0 +1,39 @@
+<%= form_with(model: work) do |form| %>
+
+  <% if work.errors.any? %>
+    <div class="error_form_container">
+      <h2>
+        <%= t (".errors"), count:work.errors.count %>
+        
+      </h2>
+      <ul class="error_form_ul">
+        <% work.errors.each do |error| %>
+          <li class="error_form_li" type="1"> <%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div> 
+  <% end %>
+<ul class="ul_form_fields">
+  <li class= 'li_title_area'>
+    <label for="title_area"><%= t("categories.form.title") %></label>
+    <%= form.text_field :title,id: "title_area", placeholder:'discribe your title',value: @work.title%>
+  </li>
+  
+  <li class= 'li_file_field'>
+  </li>
+  <div class="img_upload_container">
+        <label for="input-file" id="drop-area">
+          <%= form.file_field :work_img, id:"input-file",accept:"image/*" ,hidden: true%>
+            <div id="img_view_container">
+                <%=image_tag("icons/upload_icon.png", alt: 'upload img',id:'upload_img')%>
+                <p class="img_text"><%= t("categories.form.services_html") %></p>
+            </div>
+        </label>
+    </div>
+
+  <li class="li_button">
+    <%= form.submit t("categories.form.submit")%>
+  </li>
+</ul>
+<% end %>
+
