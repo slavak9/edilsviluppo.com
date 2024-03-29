@@ -1,0 +1,44 @@
+
+<header class="header_container">
+    <nav class="menu_bar_container">
+        <div class="menu_nav_container">
+            <button class="app_img_bt">
+                
+                <%= image_tag("icons/app_menu.png", id: "app_img_id", class: "app_img_menu", alt: "app menu") %>
+            </button>
+            <button class="icon-home-bt">
+                <%= link_to image_tag("icons/home.png",alt: "home image" ,class:"icon-home-img"), root_path %>
+            </button>
+            <ul id="list_menu" class="display_menu">
+                <li class="li_home_link"><%= link_to t(".home"), root_path %></li>
+                <li><%= link_to t(".our_work"), our_works_path %></li>
+                <li><%= link_to t(".company"), company_path %></li>
+                <li><%= link_to t(".news"), news_path %></li>
+                <li><%= link_to t(".contacts"), contacts_path%></li>
+                <li><%= link_to t(".manage"), home_manage_path%></li>
+            </ul>
+        </div>
+
+        <div class="language_img_cont">
+        <div class="languages_container">
+            <div class="languages_sub_container">
+                <p id="languages_p"><%= t(".country_code")%></p>
+                <div class="languages_img"> <%= image_tag("icons/down-arrow.png", id: "languages_img") %></div>
+            </div>
+            <ul class="languages_ul display_none">
+                <li><%= link_to "English",root_path(locale: :en)%></li>
+                <li><%= link_to "Italiano",root_path(locale: :it)%></li>
+            </ul>
+        </div>
+        <div class="additional_img_container">
+            <%= image_tag('logo/40_years_logo.png', alt: 'logo image')%>
+        </div>
+        </div>
+
+    </nav>
+    <div class="img-logo-container">
+        <%= image_tag("logo/logo.png", alt: 'logo image')%>
+    </div>
+</header>
+
+

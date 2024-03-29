@@ -1,0 +1,7 @@
+<div class="form_container">
+  <h1><%= t(".head_title") %></h1>
+  <%= render "form", product: @product %>
+  <div class="back_link_container">
+    <%= link_to t(".back"), products_path %>
+  </div>
+</div>

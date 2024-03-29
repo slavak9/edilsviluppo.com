@@ -1,0 +1,25 @@
+
+<div class="show_post_container">
+  <p style="color: green"><%= notice %></p>
+   <div class="gallery_detail_container">
+        <div class="gallery_img_container">
+        <% if @post.post_img.attached? %>
+        <%= image_tag @post.post_img %>
+        <% end %>
+        </div>
+        <header class="gallery_description_container">
+            <h3><%= @post.description %></h3>
+        </header>
+    </div>
+  <div class ='show_bt_section'>
+    <div class="link_div">
+    <%= link_to t("products.show.mod_post"), edit_post_path(@post) %> 
+    </div>
+    <div class="button_div">
+    <%= button_to t("products.show.del_post"), @post, method: :delete %>
+    </div>
+    <div class="back_link_container">
+    <%= link_to t("posts.new.back"), posts_path %>
+    </div>
+  </div>
+</div>

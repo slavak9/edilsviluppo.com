@@ -1,0 +1,8 @@
+
+<div class="form_container">
+  <h1><%= t(".title") %></h1>
+  <%= render "form", work: @work %>
+  <div class="back_link_container">
+    <%= link_to t(".back"), works_path %>
+  </div>
+</div>

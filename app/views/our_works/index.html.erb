@@ -1,0 +1,15 @@
+<h1 class="home_h1_heder"><%= t(".header_title") %></h1>
+<div class="main_show_container">
+    <% @works.each do |work| %>
+    <div class="detail_container">
+        <div class="img_container">
+        <% if work.work_img.attached? %>
+        <%= link_to image_tag(work.work_img), our_works_gallery_path(work_id: work.id)%>
+        <% end %>
+        </div>
+        <header class="description_container">
+            <h2><%= link_to work.title, our_works_gallery_path(work_id: work.id)%></h2>
+        </header>
+    </div>
+    <% end %>
+</div>

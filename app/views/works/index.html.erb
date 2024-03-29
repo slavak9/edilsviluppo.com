@@ -1,0 +1,40 @@
+
+<div class="show_category_container">
+
+
+<h1><%= t(".title") %></h1>
+<p style="color: green"><%= notice %></p>
+
+<h2 class="h2_bt"><%= link_to t("categories.index.bt_add_cat"), new_work_path %></h2>
+
+
+  <div class="grid_list_display">
+    <div id="delete_info_container" class="delete_info_container_mess display_none">
+      <h2 class="confirm_message"><%= t("categories.index.confirm_message_html") %></h2>
+      <div class="delete_info_container_button">
+        <button id="yes_button"><%= t("categories.index.confirm_yes") %></button><button id="no_button"><%= t("categories.index.confirm_no") %></button>
+      </div>
+    </div>
+    <header class="list_header_cont">
+        <p class="p_description"><%= t("categories.index.description") %></p>
+        <p class="p_picture"><%= t("categories.index.image") %></p>
+        <p class="p_manage"><%= t("categories.index.manage_content") %></p>
+    </header>
+    <% @works.each do |work| %>
+    <div class="list_content_cont">
+        <div class="i_description"><p><%= work.title%></p></div>
+        <div class="i_picture">
+          <% if work.work_img.attached? %>
+          <%= image_tag work.work_img%>
+          <% end %>
+        </div>
+        <div class="div_manage">
+            <div class="i_show"><%= button_to t("categories.index.show_cont"), work, method: :get %></div>
+            <div class="i_edit"><%= button_to t("categories.index.edit_cont"), edit_work_path(work), method: :get %></div>
+            <div id="del_<%= work.id%>" class="i_delete"><%= button_to t("categories.index.delete_cont"), work, method: :delete %></div>
+        </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+

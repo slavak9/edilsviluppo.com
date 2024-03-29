@@ -1,0 +1,36 @@
+.manage_link_cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.manage_link_cont ul{
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: solid black 1px;
+}
+
+
+.manage_link_cont li{
+    margin: 10px;
+    text-align: center;
+}
+.manage_link_cont li a{
+    font-weight: bolder;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 130%;
+}
+
+.manage_link_cont li a:hover{
+    color: rgb(245, 134, 53);
+}

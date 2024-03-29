@@ -1,0 +1,133 @@
+it:
+  home:
+    header:
+      home:     "Home"
+      company:  "Azienda"
+      our_work: "Nostri lavori"
+      news:     "Notizie"
+      contacts: "Contatti"
+      manage:   "Gestione"
+      country_code: "IT"
+  
+    index:
+      head_title_home: "Descrizione della azienda"
+    
+    manage:
+        manage_categories: "Gestire categorie dei prodotti"
+        manage_products: "Gestire prodotti"
+        manage_works: "Gestire lavori degli articoli"
+        manage_posts: "Gestire articoli"
+  
+  our_works:
+    index:
+      header_title: "Nostri lavori"
+
+  categories:
+    index:
+      head_title_cat: "Categorie dei prodotti"
+      bt_add_cat: "Aggiungere nuova categoria"
+      description: 'Descrizione'
+      image: "Imagine"
+      manage_content: "Gestire i contenuti"
+      show_cont: "Mostrare"
+      edit_cont: "Modifica"
+      delete_cont: "Elimina"
+      confirm_message_html: "Eliminazione di questa categoria eliminerà tutti gli articoli che sono associati ad esso!<br>Sei sicuro di volerlo fare?"
+      confirm_yes: "Si"
+      confirm_no: "No"
+    
+    new:
+      head_title: "Nuova categoria per prodotto"
+      back: "Ritorna alle categorie"
+
+    show:
+      mod_cat: "Modifica categoria"
+      del_cat: "Elimina categoria"
+    
+    edit:
+      edit_cat: "Modifica categoria"
+
+    form:
+      title: "Titolo:"
+      description: 'Descrizione:'
+      submit: "Crea categoria"
+      services_html: "Trascina e rilascia, <br>o clicca qui <br>per caricare l'immagine"
+      errors:
+          one: "Un errore ha impedito il salvataggio di questa categoria:"
+          other: "%{count} errori hanno impedito il salvataggio di questa categoria:"
+     
+  img_error: "deve avvere tipo di contenuto GIF, JPG, PNG, WebP o AVIF"
+
+  products:
+    index:
+      title_post: "Articoli dei prodotti"
+      add_post_bt: "Aggiungi nuovo articolo"
+    
+    new:
+      head_title: "Nuovo articolo"
+      back: "Torna indietro all'elenco degli prodotti"
+    
+    show:
+      mod_post: "Modifica articolo"
+      del_post: "Eliminare articolo"
+
+    edit:
+      edit_post: "Modifica articolo"
+
+    form:
+      select_cat: "Seleziona la categoria"
+      description: 'Descrizione:'
+      create_post:  "Crea articolo" 
+      notification: "Si prega di aggiungere la categoria prima!"
+      services_html: "Trascina e rilascia, <br>o clicca qui <br>per caricare l'immagine"
+      errors:
+          one: "Un errore ha impedito il salvataggio di questo articolo:"
+          other: "%{count} errori hanno impedito il salvataggio di questo articolo:"
+
+
+  mess_cat_created: "La categoria è stata creata con successo."
+  mess_cat_update: "La categoria è stata aggiornata con successo."
+  mess_cat_delete: "La categoria è stata eliminata con successo."
+
+  mess_post_created: "l'articolo è stato creato con successo."
+  mess_post_update: "l'articolo è stato aggiornato con successo."
+  mess_post_delete: "l'articolo è stato eliminato con successo."
+
+
+  contacts:
+    index:
+      from_name: "Nome:"
+      form_last_name: "Cognome:"
+      from_email: "Email:"
+      from_message: "Messaggio:"
+      send: "Invia"
+      form_h: "Fai una domanda"
+      l_contact: "Contatti"
+      address: "Indirizzo"
+
+    success:
+      success_message: "Grazie! Vi contatteremo al più presto."
+  
+  works:
+    index:
+      title: "Categorie del lavoro"
+      add_new: "Aggiungere una nuova categoria di lavoro"
+    
+    new:
+      title: "Nuova categoria dell lavoro"
+      back: "Torna alle categorie del lavoro"
+  
+  posts:
+    index:
+      title: "Articoli dei lavori"
+      add_bt: "Aggiungere nuovo articolo"
+    new:
+      title: "Nuovo articolo per lavoro"
+      back: "Torna indietro all'elenco degli articoli"
+      
+
+
+
+  
+
+

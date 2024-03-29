@@ -1,0 +1,48 @@
+.show_post_container{
+    padding: 0 20px;
+}
+.show_post_container,
+.show_bt_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.show_bt_section .button_div{
+    margin: 20px 0;
+    border: none;
+}
+.show_bt_section .link_div,
+.show_bt_section .button_div{
+    text-align: center;
+    width: 100%;
+    color: black;
+	padding: 5px;
+	box-shadow: 0 0 1px 1px black;
+}
+.show_bt_section .link_div:hover{
+    background-color: rgb(245, 134, 53);
+	box-shadow: 0 0 6px 2px black;
+}
+.show_bt_section .button_div:hover{
+    background-color: rgb(245, 134, 53);
+	box-shadow: 0 0 6px 2px black;
+}
+.show_bt_section .link_div a{
+    text-decoration-line:none;
+    color: black;
+}
+.show_bt_section .button_div button{
+    border: none;
+    background-color: transparent;
+}
+.show_bt_section .link_div a,
+.show_bt_section .button_div button{
+    font-size: 120%;
+    font-weight: bolder;
+    font-family:sans-serif;
+}
+
+.align{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,7 @@
+<div class="form_container">
+<h1><%= t(".edit_cat") %></h1>
+<%= render "form", category: @category %>
+<div class="back_link_container">
+  <%= link_to t("categories.new.back"), categories_path %>
+</div>
+</div>

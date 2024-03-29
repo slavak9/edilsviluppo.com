@@ -1,0 +1,7 @@
+<div class="form_container">
+  <h1><%= t(".head_title") %></h1>
+  <%= render "form", category: @category %>
+  <div class="back_link_container">
+    <%= link_to t(".back"), categories_path %>
+  </div>
+</div>

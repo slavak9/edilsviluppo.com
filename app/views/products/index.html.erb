@@ -1,0 +1,28 @@
+<div class="show_category_container">
+
+
+<h1><%= t(".title_post") %></h1>
+<p style="color: green"><%= notice %></p>
+
+<h2><%= link_to t(".add_post_bt"), new_product_path %></h2>
+
+
+  <div class="grid_list_display">
+    <header class="list_header_cont">
+        <p class="p_description"><%= t("categories.index.description") %></p>
+        <p class="p_picture"><%= t("categories.index.image") %></p>
+        <p class="p_manage"><%= t("categories.index.manage_content") %></p>
+    </header>
+    <% @products.each do |product| %>
+    <div class="list_content_cont">
+        <div class="i_description"><p><%= product.description%></p></div>
+        <div class="i_picture"><%= image_tag product.product_img%></div>
+        <div class="div_manage">
+            <div class="i_show"><%= button_to t("categories.index.show_cont"), product, method: :get %></div>
+            <div class="i_edit"><%= button_to t("categories.index.edit_cont"), edit_product_path(product), method: :get %></div>
+            <div class="i_delete"><%= button_to t("categories.index.delete_cont"), product, method: :delete %></div>
+        </div>
+    </div>
+    <% end %>
+  </div>
+</div>
