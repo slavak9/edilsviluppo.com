@@ -1,0 +1,48 @@
+<%= form_with(model: company_association_file) do |form| %>
+  <% if company_association_file.errors.any? %>
+    <div class="error_form_container">
+      <h2><%= t (".errors"), count:company_association_file.errors.count %></h2>
+      <div>
+      <ul class="error_form_ul">
+        <% company_association_file.errors.each do |error| %>
+          <li class="error_form_li" type="1"> <%= error.full_message %></li>
+        <% end %>
+      </ul>
+      </div>
+    </div>
+<% end %>
+
+
+
+<ul class="ul_form_fields">
+  <li class= 'li_text_area'>
+    <label for="descrip_area"><%= t("categories.form.description") %></label>
+    <%= form.text_area :description,id: "descrip_area", placeholder:'discribe your partner here',value: @company_association_file.description%>
+  </li>
+  <li class= 'li_file_field'>
+  </li>
+  <div class="img_upload_container">
+      <label for="input-file" id="drop-area">
+          <%= form.file_field :company_img, id:"input-file",accept:"image/*" ,hidden: true%>
+          <div id="img_view_container">
+            <%=image_tag("icons/upload_icon.png", alt: 'upload img',id:'upload_img')%>
+            <p class="img_text"><%= t("categories.form.services_html") %></p>
+          </div>
+      </label>
+  </div>
+  <div class="img_upload_container_file">
+      <label for="input-pdf" id="drop-area-pdf">
+          <%= form.file_field :pdf, id:"input-pdf",accept:".pdf" ,hidden: true%>
+          <div id="img_view_container">
+            <%=image_tag("icons/upload-pdf.png", alt: 'upload img',id:'upload_file')%>
+            <p class="text-name-file"><%= t(".services_pdf_html") %></p>
+          </div>
+      </label>
+  </div>
+
+  <li class="li_button">
+    <%= form.submit t(".submit_bt")%>
+  </li>
+</ul>
+<% end %>
+

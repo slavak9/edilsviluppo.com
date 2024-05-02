@@ -8,26 +8,17 @@
     flex-direction: column;
     align-items: center;
 }
-.form_container form,
-.form_container,
-.display_full,
-.select_category_button,
-.img_upload_container,
-#drop-area,
-#img_view_container,
-.ul_form_fields li div,
-.li_text_area,
-.li_title_area,
-.li_title_area input,
-.select_category_container li,
-.drop_down_menu_div,
-.li_text_area textarea{
+.form_container *{
     width: 100%;
 }
+
 .select_category_container,
 .form_container form{
     padding:0 20px;
     max-width: 800px;
+}
+.form_container h1{
+    text-align: center;
 }
 
 .ul_form_fields{
@@ -54,12 +45,17 @@
 .img_upload_container:hover{
 	box-shadow: 0 0 6px 2px black;
 }
+#drop-area-pdf,
 #drop-area{
     text-align: center;
 }
 #img_view_container{
     padding: 3px 3px 0 3px;
     background-color: azure;
+    cursor: pointer;
+}
+#upload_file{
+    width: 70px;
 }
 #upload_img:not(.display_full)#upload_img{
     width: 80px;
@@ -113,6 +109,7 @@
 .li_title_area label{
     font-weight: bolder;
     padding: 3px;
+    text-align: center;
 }
 .li_text_area textarea{
     height: 150px;
@@ -186,11 +183,17 @@
 .li_title_area input{
     font-size: 100%;
 }
-
+.img_upload_container_file img{
+    padding-top: 13px;
+}
+.img_upload_container_file,
 .margin_top{
     margin-top: 25px;
 }
-
+.img_upload_container_file:hover{
+    cursor: pointer;
+    box-shadow: 0 0 6px 2px black;
+}
 @media screen and (max-width:670px){
     .h2_bt{
         font-size: 120%;

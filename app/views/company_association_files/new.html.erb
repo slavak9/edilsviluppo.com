@@ -1,0 +1,8 @@
+
+<div class="form_container">
+  <h1><%= t(".title") %></h1>
+  <%= render "form", company_association_file: @company_association_file %>
+  <div class="back_link_container">
+    <%= link_to t(".back"), company_association_files_path %>
+  </div>
+</div>

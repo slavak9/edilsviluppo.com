@@ -1,2 +1,17 @@
-<h1>Company#index</h1>
-<p>Find me in app/views/company/index.html.erb</p>
+<div class="col-cont-com-div">
+    <ul class="col-cont-com-ul">
+        <% @company_association_files.each do |file| %>
+        <li class="col-cont-com-li">
+            <div class="con-des">
+                <div class="con-img">
+                    <% if file.company_img.attached? %>
+                    <%= image_tag file.company_img %>
+                    <% end %>
+                </div>
+                <h3><%= file.description %></h3>
+            </div>
+            <div class="con-file"><%= link_to image_tag("icons/file_pdf.png", title: "view pdf"), company_pdf_viewer_path(pdf_id: file.id) %></div>
+        </li>
+        <% end%>
+    </ul>
+</div>

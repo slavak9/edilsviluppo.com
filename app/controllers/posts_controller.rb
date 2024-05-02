@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @title = "Posts"
-    @posts = Post.all
+    @pagy, @posts = pagy(Post.all)
   end
 
   # GET /posts/1 or /posts/1.json

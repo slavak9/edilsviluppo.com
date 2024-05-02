@@ -17,7 +17,7 @@ function DeleteAction(event){
     });
     location.reload();
 };
-
+if(ConfirmWindow){
 document.querySelectorAll('.i_delete').forEach(element=>{
         document.querySelector(`#${element.id} form`).addEventListener('submit',(event)=>{
             event.preventDefault();
@@ -34,3 +34,4 @@ document.querySelectorAll('.i_delete').forEach(element=>{
             });
     });
 });
+};

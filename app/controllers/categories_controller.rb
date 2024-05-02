@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   # GET /categories or /categories.json
   def index
     @title = "Categories"
-    @categories = Category.all
+    @pagy, @categories = pagy(Category.all)
   end
 
   # GET /categories/1 or /categories/1.json
@@ -31,7 +31,7 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.save
-        format.html { redirect_to categories_url, notice: I18n.t(".mess_cat_created") }
+        format.html { redirect_to categories_url, notice: I18n.t(".mess_par_created") }
         format.json { render :show, status: :created, location: @category }
       else
         format.html { render :new, status: :unprocessable_entity }

@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
+    include Pagy::Backend
     before_action :set_locale
-
     private
 
     def default_url_options

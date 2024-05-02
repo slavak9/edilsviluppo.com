@@ -1,0 +1,10 @@
+
+    <div style="display:flex; justify-content:center;">
+    <% if @company_association_file.pdf.attached? %>
+    <object style="width: 90%; height: 90vh; aspect-ratio: 5 / 3; text-align: center;" 
+    data=<%= rails_blob_path(@company_association_file.pdf, disposition: 'company_association_file') %>>
+            <h3>Sorry! Your browser doesn't support PDF files!</h3>
+    <p>You can download <%= link_to @company_association_file.pdf.filename, rails_blob_path(@company_association_file.pdf, disposition: 'attachment')%> instead</p>
+    </object>
+    <% end %>
+    </div>

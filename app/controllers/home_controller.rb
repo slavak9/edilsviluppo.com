@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
   @current_user = http_basic_authenticate_with name:"admin", password:"admin",except: [:index, :gallery]
-  before_action :set_post, only: %i[ gallery ]
+  before_action :set_product, only: %i[ gallery ]
   def index
-    @categories = Category.all
+    @pagy, @categories = pagy(Category.all)
     @title = "Home"
   end
 
@@ -13,14 +13,10 @@ class HomeController < ApplicationController
   def gallery
   end
 
-  def set_post
-    @product = Product.where(category_id: params[:cat_id])
+  def set_product
+    @pagy, @product = pagy(Product.where(category_id: params[:cat_id]))
     @cat_title = Category.find(params[:cat_id])
     @title = "Gallery"
   end
 
-  # Only allow a list of trusted parameters through.
-  def post_params
-    params.require(:post).permit(:title, :category_id,:post_img)
-  end
 end

@@ -1,2 +1,16 @@
-<h1>News#index</h1>
-<p>Find me in app/views/news/index.html.erb</p>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v19.0&appId=1445345776365636" nonce="cEnFN5pB"></script>
+
+<div class="fb_post_container">
+<%if @facebook %>
+<div class="fb-post" data-href=<%= @facebook['permalink_url'] %> data-lazy="true" data-show-text='true'></div>
+ <span class="fb_link_span"><%= link_to @facebook['message'], @facebook['permalink_url'] %></span>
+<%end%>
+<%if @error%>
+    <p><%= @error %></p>
+<% end %>
+</div>
+
+
+
+
+

@@ -2,6 +2,19 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { :host => 'localhost:3000', protocol: 'http' }
+  config.action_mailer.smtp_settings = {
+  address:         'smtp.gmail.com',
+  port:            587,
+  # domain:          'http://127.0.0.1:3000/',
+  user_name:       'slavakudaka@gmail.com',
+  password:        'pejwnnnvuruindoe',
+  authentication:  'plain',
+  enable_starttls_auto: true,
+  open_timeout:    5,
+  read_timeout:    5 }
+
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development

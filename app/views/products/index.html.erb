@@ -26,3 +26,9 @@
     <% end %>
   </div>
 </div>
+<div class="nav-pagy-container">
+    <% if Product.count > 0%>
+    <p><%=if @pagy.page == @pagy.last then Product.count else @pagy.items*@pagy.page end%>/<%= Product.count %></p>
+    <%end%>
+    <%== pagy_nav(@pagy) if @pagy.pages > 1 %> 
+</div>

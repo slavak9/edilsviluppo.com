@@ -18,3 +18,9 @@
     <h1>Sorry gallery is in working state<h1>
     <% end %> 
 </div>
+<div class="nav-pagy-container">
+    <% if @post.count > 0%>
+    <p><%=if @pagy.page == @pagy.last then @post.count else @pagy.items*@pagy.page end%>/<%= @post.count %></p>
+    <%end%>
+    <%== pagy_nav(@pagy) if @pagy.pages > 1 %> 
+</div>

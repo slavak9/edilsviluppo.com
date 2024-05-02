@@ -1,0 +1,1 @@
+json.partial! "company_association_files/company_association_file", company_association_file: @company_association_file

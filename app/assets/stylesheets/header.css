@@ -137,10 +137,14 @@ position: relative;
     left: -1px;
     top: 37px;
     background-color: rgb(245, 134, 53);
+    z-index: 10;
+}
+.languages_ul li{
+    padding: 3px 0;
 }
 .languages_ul li a{
     font-size: 110%;
-    padding: 2px 5px;
+    padding: 0px 5px;
 }
 .languages_ul li:hover{
     background-color: rgb(0, 144, 82);
@@ -182,6 +186,7 @@ position: relative;
         flex-direction: column;
         top: 29px;
         left: 0;
+        z-index: 10;
     }
     .menu_nav_container li{
         border-top: solid rgba(0, 0, 0, 0.305) 1px;

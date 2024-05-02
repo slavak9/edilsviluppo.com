@@ -3,7 +3,7 @@ en:
     header:
       home:     "Home"
       our_work: "Our works"
-      company:  "Company"
+      company:  "Partners"
       news:     "News"
       contacts: "Contacts"
       manage:   "Manage"
@@ -89,9 +89,33 @@ en:
   mess_cat_update: "Category was successfully updated."
   mess_cat_delete: "Category was successfully deleted."
 
+  mess_pro_created: "Product was successfully created."
+  mess_pro_update: "Product was successfully updated."
+  mess_pro_delete: "Product was successfully deleted."
+
+  mess_work_created: "work post was successfully created."
+  mess_work_update: "work post was successfully updated."
+  mess_work_delete: "work post was successfully deleted."
+
   mess_post_created: "Post was successfully created."
   mess_post_update: "Post was successfully updated."
   mess_post_delete: "Post was successfully deleted."
+
+  mess_post_created: "Post was successfully created."
+  mess_post_update: "Post was successfully updated."
+  mess_post_delete: "Post was successfully deleted."
+
+  mess_par_created: "Partner was successfully created."
+  mess_par_update: "Partner was successfully updated."
+  mess_par_delete: "Partner was successfully deleted."
+
+  mess_succeeded_html: "Message has been sent successfully. We will contact you soon. Thank you!"
+
+  error_name: "Name field must be compiled"
+  error_last_name: "Last name field must be compiled"
+  error_email: "Email field must be compiled"
+  error_email_ver: "In email field must be an email address"
+  error_message: "Message field must be compiled"
 
   contacts:
     index:
@@ -103,6 +127,7 @@ en:
       form_h: "Ask a question"
       address: "Address"
       l_contact: "Contacts"
+      mes_form_errors: "Error: All fields are mandatory."
 
     success:
       success_message: "Thanks!  We will contact you as soon as possible."
@@ -123,3 +148,21 @@ en:
     new:
       title: "New post of the work"
       back: "Back to posts of the work"
+  company_association_files:
+    index:
+      title: "Partners"
+      add_button: "Add partner"
+    new:
+      title: "Create new partner"
+      back: "Back to partner list"
+    show:
+      modify: "Modify partner"
+      delete: "Delete partner"
+    edit:
+      title: "Modification of partner"
+    form:
+      services_pdf_html: "Drag and drop, <br>or click here <br>to upload pdf file"
+      submit_bt: "Create partner"
+      errors:
+        one: "One error prohibited this partner from being saved:"
+        other: "%{count} errors prohibited this partner from being saved:"

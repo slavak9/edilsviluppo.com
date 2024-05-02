@@ -2,9 +2,9 @@ it:
   home:
     header:
       home:     "Home"
-      company:  "Azienda"
+      company:  "Partners"
       our_work: "Nostri lavori"
-      news:     "Notizie"
+      news:     "News"
       contacts: "Contatti"
       manage:   "Gestione"
       country_code: "IT"
@@ -17,6 +17,7 @@ it:
         manage_products: "Gestire prodotti"
         manage_works: "Gestire lavori degli articoli"
         manage_posts: "Gestire articoli"
+        manage_partner: "Gestire partner list"
   
   our_works:
     index:
@@ -89,10 +90,29 @@ it:
   mess_cat_update: "La categoria è stata aggiornata con successo."
   mess_cat_delete: "La categoria è stata eliminata con successo."
 
+  mess_pro_created: "Il prodotto è stato creato con successo."
+  mess_pro_update: "Il prodotto è stato aggiornato con successo."
+  mess_pro_delete: "Il prodotto è stato eliminato con successo."
+
+  mess_work_created: "La categoria del lavoro è stata creata con successo."
+  mess_work_update: "La categoria del lavoro è stata aggiornata con successo."
+  mess_work_delete: "La categoria del lavoro è stata eliminata con successo."
+
   mess_post_created: "l'articolo è stato creato con successo."
   mess_post_update: "l'articolo è stato aggiornato con successo."
   mess_post_delete: "l'articolo è stato eliminato con successo."
 
+  mess_par_created: "Partner è stato creato con successo."
+  mess_par_update: "Partner è stato aggiornato con successo."
+  mess_par_delete: "Partner è stato eliminato con successo."
+
+  mess_succeeded_html: "Messaggio è stato inviato con successo. Vi contatteremo al piu presto. Grazie!"
+
+  error_name: "Campo nome deve essere compilato"
+  error_last_name: "Campo cognome deve essere compilato"
+  error_email: "Campo email deve essere compilato"
+  error_email_ver: "In email capmo deve essere indirizzo email"
+  error_message: "Campo messaggio deve essere compilato"
 
   contacts:
     index:
@@ -104,6 +124,7 @@ it:
       form_h: "Fai una domanda"
       l_contact: "Contatti"
       address: "Indirizzo"
+      mes_form_errors: "Errore: Tutti i campi sono obbligatori."
 
     success:
       success_message: "Grazie! Vi contatteremo al più presto."
@@ -125,9 +146,23 @@ it:
       title: "Nuovo articolo per lavoro"
       back: "Torna indietro all'elenco degli articoli"
       
-
-
-
-  
+  company_association_files:
+    index:
+      title: "Partners"
+      add_button: "Aggiungere partner"
+    new:
+      title: "Creazione del nuovo partner"
+      back: "Tornare alla partner list"
+    show:
+      modify: "Modifica partner"
+      delete: "Eliminare partner"
+    edit:
+      title: "Modificazione del partner"
+    form:
+      services_pdf_html: "Trascina e rilascia, <br>o clicca qui <br>per caricare pdf file"
+      submit_bt: "Creare partner"
+      errors:
+        one: "Un errore ha impedito il salvataggio di questo partner:"
+        other: "%{count} errori hanno impedito il salvataggio di questo partner:"
 
 
